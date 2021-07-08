@@ -1,11 +1,14 @@
 import React from "react";
-import Button from "elements/Button";
+
+import Header from "parts/Header";
+import { useLocation } from "react-router-dom";
 
 function LandingPage() {
+  const location = useLocation();
   return (
-    <div>
-      <Button> Halo</Button>
-    </div>
+    <>
+      <Header location={location} />
+    </>
   );
 }
 

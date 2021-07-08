@@ -1,3 +1,6 @@
+import React from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+
 //import bootstrap
 import "assets/scss/style.scss";
 
@@ -6,7 +9,9 @@ import LandingPage from "pages/LandingPage";
 function App() {
   return (
     <div className="App">
-      <LandingPage></LandingPage>
+      <Router>
+        <Route path="/" component={LandingPage} />
+      </Router>
     </div>
   );
 }
